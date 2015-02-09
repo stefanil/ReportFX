@@ -740,13 +740,22 @@ order by monatswerte.id_zs_monat]]></xml-property>
     </styles>
     <page-setup>
         <simple-master-page name="Simple MasterPage" id="2">
+            <property name="type">a4</property>
+            <property name="backgroundColor">#E9E9E9</property>
+            <property name="height">210mm</property>
+            <property name="width">148mm</property>
             <page-header>
-                <image id="68"/>
+                <image id="68">
+                    <property name="height">0.375in</property>
+                    <property name="width">7.625in</property>
+                    <property name="source">url</property>
+                    <expression name="uri" type="constant">d:\DEVEL\PROJEKTE\stadtwerkeGoerlitz\git\ReportFX\img\bild.svg</expression>
+                </image>
             </page-header>
             <page-footer>
                 <text id="3">
                     <property name="contentType">html</property>
-                    <text-property name="content"><![CDATA[<value-of>new Date()</value-of>]]></text-property>
+                    <text-property name="content"><![CDATA[Datum: <value-of>new Date()</value-of>]]></text-property>
                 </text>
             </page-footer>
         </simple-master-page>
@@ -2312,6 +2321,7 @@ order by monatswerte.id_zs_monat]]></xml-property>
 ]]></xml-property>
             <property name="outputFormat">SVG</property>
             <property name="inheritColumns">false</property>
+            <property name="backgroundColor">#E9E9E9</property>
             <property name="height">3.0729166666666665in</property>
             <property name="width">7.9375in</property>
             <property name="dataSet">zaehlerwechsel1</property>
