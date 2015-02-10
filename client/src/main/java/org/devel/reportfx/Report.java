@@ -20,4 +20,8 @@ public final class Report {
 		return false;
 	}
 
+	public static void delete() {
+		
+	}
+
 }
