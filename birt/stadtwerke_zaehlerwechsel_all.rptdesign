@@ -774,30 +774,6 @@ order by monatswerte.id_zs_monat]]></xml-property>
         </simple-master-page>
     </page-setup>
     <body>
-        <grid id="25">
-            <column id="26"/>
-            <column id="27"/>
-            <column id="28"/>
-            <column id="29"/>
-            <row id="30">
-                <cell id="31"/>
-                <cell id="32"/>
-                <cell id="33"/>
-                <cell id="34"/>
-            </row>
-            <row id="35">
-                <cell id="36"/>
-                <cell id="37"/>
-                <cell id="38"/>
-                <cell id="39"/>
-            </row>
-            <row id="40">
-                <cell id="41"/>
-                <cell id="42"/>
-                <cell id="43"/>
-                <cell id="44"/>
-            </row>
-        </grid>
         <extended-item extensionName="Chart" name="Zählerwechsel" id="51">
             <xml-property name="xmlRepresentation"><![CDATA[<model:ChartWithAxes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:attribute="http://www.birt.eclipse.org/ChartModelAttribute" xmlns:data="http://www.birt.eclipse.org/ChartModelData" xmlns:layout="http://www.birt.eclipse.org/ChartModelLayout" xmlns:model="http://www.birt.eclipse.org/ChartModel" xmlns:type="http://www.birt.eclipse.org/ChartModelType">
   <Version>2.6.1</Version>
@@ -2391,7 +2367,7 @@ order by monatswerte.id_zs_monat]]></xml-property>
             <property name="outputFormat">SVG</property>
             <property name="inheritColumns">false</property>
             <property name="backgroundColor">#E9E9E9</property>
-            <property name="marginTop">20mm</property>
+            <property name="marginTop">0mm</property>
             <property name="height">3.0729166666666665in</property>
             <property name="width">7.9375in</property>
             <property name="dataSet">stadtwerke_monatswerte</property>
