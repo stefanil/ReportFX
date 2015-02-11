@@ -3,6 +3,8 @@ package org.devel.reportfx;
 import java.net.URL;
 import java.util.ResourceBundle;
 
+import org.devel.reportfx.tasks.JasperReporter;
+
 import javafx.animation.Interpolator;
 import javafx.animation.KeyFrame;
 import javafx.animation.KeyValue;
@@ -49,7 +51,7 @@ public class MainView implements FxmlView<MainViewModel>, Initializable {
 		duckPane.rotateProperty().bind(viewModel.duckRotateProperty());
 		menuExportHtml.setAccelerator(KeyCombination.keyCombination("Ctrl+E"));
 		menuExportHtml.setOnAction(e -> {
-			Report.export();
+			JasperReporter.export();
 			final Timeline timeline = new Timeline();
 			timeline.setCycleCount(1);
 			timeline.getKeyFrames().add(

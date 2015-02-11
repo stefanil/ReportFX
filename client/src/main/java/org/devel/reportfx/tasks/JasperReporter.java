@@ -1,4 +1,4 @@
-package org.devel.reportfx;
+package org.devel.reportfx.tasks;
 
 import java.io.File;
 import java.net.URISyntaxException;
@@ -14,10 +14,10 @@ import net.sf.jasperreports.engine.JasperPrint;
 import net.sf.jasperreports.engine.JasperPrintManager;
 import net.sf.jasperreports.engine.JasperReport;
 
-public final class Report {
+public final class JasperReporter {
 
-	public static final String IMPORT_URL = "/org/devel/reportfx/in/stadtwerke_zaehlerwechsel_all.jrxml";
-	public static final String EXPORT_URL = "/org/devel/reportfx/out/stadtwerke_zaehlerwechsel_all.html";
+	public static final String IMPORT_URL = "/org/devel/reportfx/in/jasper/stadtwerke_zaehlerwechsel_all.jrxml";
+	public static final String EXPORT_URL = "/org/devel/reportfx/out/jasper/stadtwerke_zaehlerwechsel_all.html";
 
 	public static void export() {
 
@@ -27,9 +27,9 @@ public final class Report {
 			JasperPrint filledReport = fill(connection, compiledReport);
 			// export
 			JasperExportManager.exportReportToHtmlFile(filledReport,
-					Report.class.getResource(EXPORT_URL).getPath());
+					JasperReporter.class.getResource(EXPORT_URL).getPath());
 			System.out.println("Report generated");
-		} catch (JRException e) { // | IOException e) { // | URISyntaxException e) {
+		} catch (JRException e) {
 			e.printStackTrace();
 		}
 	}
@@ -49,6 +49,7 @@ public final class Report {
 
 	private static JasperPrint fill(Connection connection,
 			JasperReport compiledReport) throws JRException {
+		@SuppressWarnings({ "rawtypes", "unchecked" })
 		JasperPrint filledReport = JasperFillManager.fillReport(compiledReport,
 				new HashMap() {
 					private static final long serialVersionUID = 6942755415990522205L;
@@ -62,7 +63,7 @@ public final class Report {
 	private static JasperReport compile() throws JRException {
 		// compile report temple
 		JasperReport compiledReport = JasperCompileManager
-				.compileReport(Report.class.getResourceAsStream(IMPORT_URL));
+				.compileReport(JasperReporter.class.getResourceAsStream(IMPORT_URL));
 		return compiledReport;
 	}
 
@@ -88,16 +89,12 @@ public final class Report {
 
 	public static boolean exists() {
 		try {
-			return new File(Report.class.getResource(EXPORT_URL).toURI())
+			return new File(JasperReporter.class.getResource(EXPORT_URL).toURI())
 					.exists();
 		} catch (URISyntaxException e) {
 			e.printStackTrace();
 		}
 		return false;
-	}
-
-	public static void delete() {
-
 	}
 
 }
