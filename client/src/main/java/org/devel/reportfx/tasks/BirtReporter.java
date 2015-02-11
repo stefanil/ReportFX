@@ -5,7 +5,6 @@ import java.net.URISyntaxException;
 import java.util.HashMap;
 
 import org.eclipse.birt.report.engine.api.EngineConfig;
-import org.eclipse.birt.report.engine.api.HTMLRenderContext;
 import org.eclipse.birt.report.engine.api.HTMLRenderOption;
 import org.eclipse.birt.report.engine.api.IReportRunnable;
 import org.eclipse.birt.report.engine.api.IRunAndRenderTask;
@@ -24,7 +23,7 @@ public final class BirtReporter {
 		ReportEngine engine = null;
 		IReportRunnable design = null;
 		IRunAndRenderTask task = null;
-		HTMLRenderContext renderContext = null;
+		@SuppressWarnings({ "rawtypes", "unused" })
 		HashMap contextMap = null;
 		HTMLRenderOption options = null;
 
