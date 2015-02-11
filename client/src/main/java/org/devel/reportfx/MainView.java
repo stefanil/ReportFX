@@ -53,7 +53,7 @@ public class MainView implements FxmlView<MainViewModel>, Initializable {
 			final Timeline timeline = new Timeline();
 			timeline.setCycleCount(1);
 			timeline.getKeyFrames().add(
-					new KeyFrame(Duration.millis(500), new KeyValue(
+					new KeyFrame(Duration.millis(1000), new KeyValue(
 							viewModel.duckRotateProperty(), 360,
 							Interpolator.EASE_OUT)));
 			timeline.setOnFinished(ae -> viewModel.setDuckRotate(0.0));

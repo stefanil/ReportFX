@@ -1,0 +1,1 @@
+"Zählerstand " + $F{id_zs_monat}

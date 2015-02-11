@@ -33,7 +33,7 @@
 		</VBox>
 		<AnchorPane fx:id="duckPane" maxHeight="20.0" maxWidth="20.0" prefHeight="20.0" prefWidth="20.0">
 			<children>
-				<MeshView id="DuckFXML" fx:id="duckView" rotate="90.0" scaleX="10.0" scaleY="10.0" scaleZ="10.0" AnchorPane.leftAnchor="0.6" AnchorPane.topAnchor="1.9">
+				<MeshView id="DuckFXML" fx:id="duckView" rotate="90.0" scaleX="66.0" scaleY="66.0" scaleZ="66.0" AnchorPane.leftAnchor="0.6" AnchorPane.topAnchor="1.9">
 					<material>
 						<PhongMaterial fx:id="duckMaterial" specularPower="15.7955">
 							<diffuseColor>

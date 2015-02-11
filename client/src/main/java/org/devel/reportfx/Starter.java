@@ -19,12 +19,13 @@ public class Starter extends Application {
 	
 	@Override
 	public void start(Stage stage) throws Exception {
-		stage.setTitle("Hello World Application");
+		stage.setTitle("ReportFX");
 
 		ViewTuple<MainView, MainViewModel> viewTuple = FluentViewLoader.fxmlView(MainView.class).load();
 		
 		Parent root = viewTuple.getView();
-		stage.setScene(new Scene(root));
+		Scene scene = new Scene(root);
+		stage.setScene(scene);
 		stage.show();
 	}
 }
