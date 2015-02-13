@@ -12,6 +12,7 @@ import org.eclipse.birt.report.engine.api.ReportEngine;
 
 public final class BirtReporter {
 
+	// TODO make ENV VAR
 	private static final String BIRT_RUNTIME_REPORT_ENGINE_URL = "d:/DEVEL/ide/birt-runtime-4_4_1/ReportEngine";
 	public static final String IMPORT_URL = "/org/devel/reportfx/in/birt/stadtwerke_zaehlerwechsel_all.rptdesign";
 	public static final String EXPORT_URL = "/org/devel/reportfx/out/birt/stadtwerke_zaehlerwechsel_all.html";

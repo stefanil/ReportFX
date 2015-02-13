@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.web.*?>
 <?import java.lang.*?>
 <?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
@@ -11,8 +12,9 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.VBox?>
 
-<StackPane alignment="CENTER" prefHeight="150.0" prefWidth="200.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.devel.reportfx.MainView">
+<StackPane alignment="CENTER" minHeight="300.0" minWidth="500.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.devel.reportfx.MainView">
 	<children>
+		<!-- real content -->
 		<VBox>
 			<children>
 				<MenuBar>
@@ -29,11 +31,13 @@
 						</Menu>
 					</menus>
 				</MenuBar>
+				<fx:include fx:id="reportView" source="ReportView.fxml" />
 			</children>
 		</VBox>
+		<!-- progress -->
 		<AnchorPane fx:id="duckPane" maxHeight="20.0" maxWidth="20.0" prefHeight="20.0" prefWidth="20.0">
 			<children>
-				<MeshView id="DuckFXML" fx:id="duckView" rotate="90.0" scaleX="66.0" scaleY="66.0" scaleZ="66.0" AnchorPane.leftAnchor="0.6" AnchorPane.topAnchor="1.9">
+				<MeshView id="DuckFXML" fx:id="duckView" opacity="0.0" rotate="90.0" scaleX="66.0" scaleY="66.0" scaleZ="66.0" AnchorPane.leftAnchor="0.6" AnchorPane.topAnchor="1.9">
 					<material>
 						<PhongMaterial fx:id="duckMaterial" specularPower="15.7955">
 							<diffuseColor>

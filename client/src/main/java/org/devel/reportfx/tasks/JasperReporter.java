@@ -61,6 +61,9 @@ public final class JasperReporter {
 	}
 
 	private static JasperReport compile() throws JRException {
+		
+		JasperReporter.class.getResource("/");
+		
 		// compile report temple
 		JasperReport compiledReport = JasperCompileManager
 				.compileReport(JasperReporter.class.getResourceAsStream(IMPORT_URL));
@@ -74,8 +77,7 @@ public final class JasperReporter {
 		String dbName = "stadtwerke";
 		String driver = "com.mysql.jdbc.Driver";
 		String userName = "stefan";
-		// TODO make password empty
-		String password = "52RpJdcu";
+		String password = "stefan";
 		try {
 			Class.forName(driver).newInstance();
 			connection = DriverManager.getConnection(url + dbName, userName,
